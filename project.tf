@@ -6,5 +6,5 @@ import {
 resource "google_project" "default" {
   name       = "cinnes-dev"
   project_id = data.google_client_config.google_config.project
-  org_id = data.google_organization.default.id
+  org_id = var.organization_id
 }

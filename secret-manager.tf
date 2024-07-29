@@ -1,4 +1,4 @@
-resource "google_project_service" "artifactregistry_api" {
+resource "google_project_service" "secret_manager_api" {
   project = google_project.default.id
   service = "secretmanager.googleapis.com"
 }

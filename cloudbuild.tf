@@ -1,3 +1,8 @@
+resource "google_project_service" "cloud_build_api" {
+  project = google_project.default.id
+  service = "cloudbuild.googleapis.com"
+}
+
 resource "google_service_account" "cloudbuild_sa" {
   account_id = "cloud-sa"
   display_name = "Cloudbuild SA"
@@ -35,7 +40,8 @@ resource "google_cloudbuild_trigger" "github_master_trigger" {
   service_account = google_service_account.cloudbuild_sa.id
   filename        = "ci/deploy.yaml"
   depends_on = [
-    google_project_iam_member.cloud_deployer
+    google_project_iam_member.cloud_deployer,
+    google_project_service.cloud_build_api
   ]
 
   include_build_logs = "INCLUDE_BUILD_LOGS_WITH_STATUS"

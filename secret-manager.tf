@@ -14,6 +14,10 @@ resource "google_secret_manager_secret" "health-ingest-key" {
       }
     }
   }
+
+  depends_on = [
+    google_project_service.secret_manager_api
+  ]
 }
 
 resource "google_secret_manager_secret" "sentry-auth-token" {
@@ -27,6 +31,10 @@ resource "google_secret_manager_secret" "sentry-auth-token" {
       }
     }
   }
+
+  depends_on = [
+    google_project_service.secret_manager_api
+  ]
 }
 
 resource "google_secret_manager_secret" "influx-token" {
@@ -40,4 +48,8 @@ resource "google_secret_manager_secret" "influx-token" {
       }
     }
   }
+
+  depends_on = [
+    google_project_service.secret_manager_api
+  ]
 }

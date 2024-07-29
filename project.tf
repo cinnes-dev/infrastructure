@@ -6,4 +6,8 @@ import {
 resource "google_project" "default" {
   name       = "cinnes-dev"
   project_id = data.google_client_config.google_config.id
+
+  depends_on = [
+    google_project_service.cloud_resource_manager
+  ]
 }

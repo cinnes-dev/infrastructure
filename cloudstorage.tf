@@ -14,6 +14,10 @@ resource "google_storage_bucket" "cloudbuild_logs" {
   location = "EU"
   force_destroy = true
   public_access_prevention = "enforced"
+
+  depends_on = [
+    google_project_service.cloud_storage_api
+  ]
 }
 
 resource "google_storage_bucket" "build_cache" {
@@ -22,4 +26,8 @@ resource "google_storage_bucket" "build_cache" {
   location = "EU"
   force_destroy = true
   public_access_prevention = "enforced"
+
+  depends_on = [
+    google_project_service.cloud_storage_api
+  ]
 }

@@ -1,3 +1,3 @@
 data "google_organization" "default" {
-  domain = var.domain-name
+  organization = var.organization_id
 }

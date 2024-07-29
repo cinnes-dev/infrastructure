@@ -38,6 +38,10 @@ variable "platform-repo-name" {
   default = "platform"
 }
 
+variable "organization_id" {
+  default = 739063641148
+}
+
 # variable "idp_client_id" {
 # }
 #

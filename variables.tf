@@ -44,9 +44,7 @@ variable "platform-repo-name" {
 }
 
 variable "idp_client_id" {
-  # env var populated
 }
 
 variable "idp_client_secret" {
-  # env var populated
 }

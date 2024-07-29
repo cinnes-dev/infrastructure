@@ -15,11 +15,11 @@ resource "google_identity_platform_config" "default" {
     allow_duplicate_emails = false
 
     anonymous {
-      enabled = true
+      enabled = false
     }
     email {
-      enabled = true
-      password_required = false
+      enabled = false
+      password_required = true
     }
   }
 #   blocking_functions {

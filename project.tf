@@ -1,4 +1,4 @@
 resource "google_project" "cinnes_dev_project" {
-  name       = "cinnes-dev-2"
+  name       = google
   project_id = "cinnes-dev-2"
 }

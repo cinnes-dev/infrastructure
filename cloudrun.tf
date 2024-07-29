@@ -26,6 +26,10 @@ resource "google_cloud_run_v2_service" "platform_service" {
   depends_on = [
     google_artifact_registry_repository.platform
   ]
+
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "google_cloud_run_domain_mapping" "default" {

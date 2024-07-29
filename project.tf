@@ -5,5 +5,5 @@ import {
 
 resource "google_project" "default" {
   name       = "cinnes-dev"
-  project_id = "cinnes-dev-id"
+  project_id = data.google_client_config.google_config.id
 }

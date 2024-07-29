@@ -38,8 +38,8 @@ variable "platform-repo-name" {
   default = "platform"
 }
 
-variable "idp_client_id" {
-}
-
-variable "idp_client_secret" {
-}
+# variable "idp_client_id" {
+# }
+#
+# variable "idp_client_secret" {
+# }

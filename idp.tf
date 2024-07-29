@@ -39,6 +39,10 @@ resource "google_identity_platform_config" "default" {
     "localhost",
     var.domain-name
   ]
+
+  depends_on = [
+    google_project_service.identitytoolkit_api
+  ]
 }
 
 # resource "google_identity_platform_default_supported_idp_config" "idp_config" {

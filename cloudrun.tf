@@ -36,6 +36,6 @@ resource "google_cloud_run_domain_mapping" "default" {
   }
 
   metadata {
-    namespace = var.project
+    namespace = google_project.cinnes_dev_project.name
   }
 }

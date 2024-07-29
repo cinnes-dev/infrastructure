@@ -1,8 +1,3 @@
-import {
-  id = "projects/${var.project}/locations/${var.region-us}/services/platform"
-  to = google_cloud_run_v2_service.platform_service
-}
-
 resource "google_cloud_run_v2_service" "platform_service" {
   name     = "platform"
   location = var.region-us

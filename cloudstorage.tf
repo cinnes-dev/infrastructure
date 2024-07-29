@@ -1,3 +1,8 @@
+resource "google_project_service" "cloud_storage_service" {
+  project = google_project.cinnes_dev_project
+  service = "cloudstorage.googleapis.com"
+}
+
 resource "google_storage_bucket" "cloudbuild_logs" {
   # Unique across all cloud storage users
   name     = "cinnes-dev-platform-cloudbuild-logs"

@@ -1,7 +1,7 @@
 resource "google_cloud_run_v2_service" "platform_service" {
   name     = "platform"
   location = var.region-us
-  project  = google_project.cinnes_dev_project.id
+  project  = google_project.default.id
 
   template {
     service_account = google_service_account.cloudbuild_sa.email
@@ -36,6 +36,6 @@ resource "google_cloud_run_domain_mapping" "default" {
   }
 
   metadata {
-    namespace = google_project.cinnes_dev_project.name
+    namespace = google_project.default.name
   }
 }

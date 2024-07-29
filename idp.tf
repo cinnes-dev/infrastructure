@@ -1,10 +1,10 @@
 resource "google_project_service" "identitytoolkit" {
-  project = google_project.cinnes_dev_project.id
+  project = google_project.default.id
   service = "identitytoolkit.googleapis.com"
 }
 
 resource "google_identity_platform_config" "default" {
-  project = google_project.cinnes_dev_project.id
+  project = google_project.default.id
   autodelete_anonymous_users = true
   sign_in {
     allow_duplicate_emails = false

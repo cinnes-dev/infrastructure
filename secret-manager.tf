@@ -1,6 +1,6 @@
 resource "google_secret_manager_secret" "health-ingest-key" {
   secret_id = "health-ingest-key"
-  project = google_project.cinnes_dev_project.id
+  project = google_project.default.id
 
   replication {
     user_managed {
@@ -13,7 +13,7 @@ resource "google_secret_manager_secret" "health-ingest-key" {
 
 resource "google_secret_manager_secret" "sentry-auth-token" {
   secret_id = "sentry-auth-token"
-  project = google_project.cinnes_dev_project.id
+  project = google_project.default.id
 
   replication {
     user_managed {
@@ -26,7 +26,7 @@ resource "google_secret_manager_secret" "sentry-auth-token" {
 
 resource "google_secret_manager_secret" "influx-token" {
   secret_id = "influx-token"
-  project = google_project.cinnes_dev_project.id
+  project = google_project.default.id
 
   replication {
     user_managed {

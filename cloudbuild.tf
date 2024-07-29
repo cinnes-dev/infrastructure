@@ -32,7 +32,7 @@ resource "google_project_iam_member" "cloud_deployer" {
     "roles/secretmanager.secretAccessor"
   ])
 
-  project = google_project.cinnes_dev_project.id
+  project = google_project.default.id
   role = each.key
   member = "serviceAccount:${google_service_account.cloudbuild_sa.email}"
 }

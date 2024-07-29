@@ -1,5 +1,5 @@
 resource "google_project_service" "cloud_storage_service" {
-  project = google_project.cinnes_dev_project
+  project = google_project.cinnes_dev_project.id
   service = "cloudstorage.googleapis.com"
 }
 

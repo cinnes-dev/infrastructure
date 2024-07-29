@@ -1,7 +1,7 @@
 resource "google_cloud_run_v2_service" "platform_service" {
   name     = "platform"
   location = var.region-us
-  project  = var.project
+  project  = google_project.cinnes_dev_project.id
 
   template {
     service_account = google_service_account.cloudbuild_sa.email

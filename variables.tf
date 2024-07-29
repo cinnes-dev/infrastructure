@@ -1,8 +1,3 @@
-variable "project" {
-  type = string
-  default = "cinnes-dev"
-}
-
 variable "region" {
   type = string
   default = "europe-west2"

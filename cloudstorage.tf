@@ -1,6 +1,11 @@
-resource "google_project_service" "cloud_storage_service" {
+resource "google_project_service" "cloud_storage_api" {
   project = google_project.default.id
   service = "cloudstorage.googleapis.com"
+}
+
+resource "google_project_service" "service_usage_api" {
+  project = google_project.default.id
+  service = "serviceusage.googleapis.com"
 }
 
 resource "google_storage_bucket" "cloudbuild_logs" {

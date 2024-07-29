@@ -1,3 +1,8 @@
+resource "google_project_service" "artifactregistry_api" {
+  project = google_project.default.id
+  service = "artifactregistry.googleapis.com"
+}
+
 resource "google_artifact_registry_repository" "platform" {
   location      = var.gcr-location-us
   repository_id = "gcr.io"

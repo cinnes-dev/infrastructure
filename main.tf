@@ -7,3 +7,8 @@ provider "google" {
 data "google_client_config" "google_config" {
 
 }
+
+resource "google_project_service" "iam_api" {
+  project = google_project.default.id
+  service = "iam.googleapis.com"
+}

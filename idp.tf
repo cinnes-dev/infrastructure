@@ -1,4 +1,4 @@
-resource "google_project_service" "identitytoolkit" {
+resource "google_project_service" "identitytoolkit_api" {
   project = google_project.default.id
   service = "identitytoolkit.googleapis.com"
 }

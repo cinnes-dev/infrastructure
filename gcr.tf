@@ -28,6 +28,10 @@ resource "google_artifact_registry_repository" "platform" {
       keep_count = 3
     }
   }
+
+  depends_on = [
+    google_project_service.artifactregistry_api
+  ]
 }
 
 data "google_artifact_registry_docker_image" "platform_image" {

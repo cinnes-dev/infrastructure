@@ -1,6 +1,6 @@
 resource "google_project_service" "cloud_storage_api" {
   project = google_project.default.id
-  service = "cloudstorage.googleapis.com"
+  service = "storage.googleapis.com"
 }
 
 resource "google_project_service" "service_usage_api" {
